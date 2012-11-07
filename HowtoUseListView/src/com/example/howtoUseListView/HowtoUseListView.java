@@ -16,14 +16,14 @@ public class HowtoUseListView extends Activity {
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		setContentView(R.layout.activity_howto_use_list_view);
+		setContentView(R.layout.howtouselistview);
 		
 		crearLista();
 	}
 
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {
-		getMenuInflater().inflate(R.menu.activity_howto_use_list_view, menu);
+		getMenuInflater().inflate(R.menu.howtouselistview, menu);
 		return true;
 	}
 	
