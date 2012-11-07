@@ -43,5 +43,8 @@ public class HowtoUseListView extends Activity {
 		myListView = (ListView) findViewById(R.id.myListView);
 //		myListView.setAdapter(new HowtoUseListView_baseAdapter(mySimpleElements));
 		myListView.setAdapter(new HowtoUseListView_ArrayAdapter(this, mySimpleElements));
+		
+		/*HowtoUseListView_ArrayAdapter ad = (HowtoUseListView_ArrayAdapter) myListView.getAdapter();
+		ad.remove(mySimpleElements.get(3));*/
 	}
 }
