@@ -16,11 +16,14 @@ public class HowtoUseListView_ArrayAdapter extends ArrayAdapter<MySimpleElement>
 	private HashMap<MySimpleElement, View> viewOfObject = new HashMap<MySimpleElement, View>();
 
 	public HowtoUseListView_ArrayAdapter(Context context, ArrayList<MySimpleElement> mySimpleElements) {
-		super(context, R.layout.howtouselistview_row, mySimpleElements);
+		super(context, -1 /*It is not needed in our implementation but needed for super*/, mySimpleElements);
+		
+		//IDEAL: super(mySimpleElements); --> Use BaseAdapter.
 	}
 
 	@Override
-	public View getView(int position, View convertView /*It contains the row that was before in that position*/, ViewGroup parent) {
+	public View getView(int position, View convertView /*It contains the row that was before in that position*/
+			, ViewGroup parent /*list view*/) {
 		Log.d("Adapter", "Pos gen: "+position);
 		
 		MySimpleElement mySimpleElement = this.getItem(position);

@@ -14,7 +14,7 @@ public class HowtoUseListView_baseAdapter extends BaseAdapter {
 	
 	private ArrayList<MySimpleElement> mySimpleElements;
 	
-	private HashMap<MySimpleElement, View> viewOfObject = new HashMap<MySimpleElement, View>();;
+	private HashMap<MySimpleElement, View> viewOfObject = new HashMap<MySimpleElement, View>();
 
 	public HowtoUseListView_baseAdapter(ArrayList<MySimpleElement> mySimpleElements){
 		this.mySimpleElements = mySimpleElements;
@@ -31,13 +31,15 @@ public class HowtoUseListView_baseAdapter extends BaseAdapter {
 		return mySimpleElements.get(position);
 	}
 
+	/*WTF is this??*/
 	@Override
 	public long getItemId(int position) {
 		return -1;
 	}
 
 	@Override
-	public View getView(int position, View convertView, ViewGroup parent) {
+	public View getView(int position, View convertView /*It contains the row that was before in that position*/
+			, ViewGroup parent) {
 		Log.d("Adapter", "Pos gen: "+position);
 		
 		MySimpleElement mySimpleElement = this.getItem(position);
